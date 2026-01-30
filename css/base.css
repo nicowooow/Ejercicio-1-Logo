@@ -1,9 +1,19 @@
-body {
+* {
   font-family: "Science Gothic", Arial, Helvetica, sans-serif;
-    margin: 20rem;
+}
+body {
+  margin: 10rem;
 }
 body > * {
   border: 2px solid black;
+}
+
+body::after {
+  text-align: left;
+  content: "Page Content";
+  padding: 30px;
+  position: absolute;
+  right: 3rem;
 }
 
 header {
@@ -17,6 +27,18 @@ main > h1 {
   padding: 7rem 2rem;
 }
 
+main::before {
+  text-align: right;
+  content: "Screen Viewport";
+  border: 2px solid black;
+  padding: 30px;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  width: 85vw;
+  height: 100vh;
+}
+
 .add-cart {
   background-color: rgb(168, 168, 168);
   display: grid;
@@ -27,23 +49,29 @@ main > h1 {
 .add-cart > section {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+
 }
 
 .add-cart > section > h2 {
- font-size: 2rem;
+  font-size: 2rem;
+  text-align: left;
 }
 .add-cart > section > button {
-  width: auto;
+  width: 100px;
+  height: 30px;
 }
 
 .business {
+  position: relative;
+  left: -8%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
-  gap: 1rem;
+  gap: 3rem;
   justify-items: center;
   align-items: center;
+  padding: 7rem 3rem;
 }
 
 .business > section:nth-child(4) {
@@ -53,12 +81,22 @@ main > h1 {
 footer {
   display: grid;
   justify-items: center;
+  padding: 7rem 3rem;
 }
 
-footer > h2 {
+.copy {
+  display: grid;
+  justify-items: center;
+  position: relative;
+  left: -10%;
+}
+.copy > h2 {
   display: block;
+  align-items: center;
+  font-size: 3rem;
+  padding-bottom: 0;
 }
 
-footer > img {
+.copy > img {
   width: 40%;
 }
