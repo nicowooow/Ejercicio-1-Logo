@@ -1,5 +1,9 @@
 body {
-  font-family: "science-gothic", Arial, Helvetica, sans-serif;
+  font-family: "Science Gothic", Arial, Helvetica, sans-serif;
+    margin: 20rem;
+}
+body > * {
+  border: 2px solid black;
 }
 
 header {
@@ -7,9 +11,17 @@ header {
   justify-content: center;
 }
 
+main > h1 {
+  display: grid;
+  justify-content: center;
+  padding: 7rem 2rem;
+}
+
 .add-cart {
+  background-color: rgb(168, 168, 168);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
 }
 
 .add-cart > section {
@@ -17,14 +29,36 @@ header {
   grid-template-rows: repeat(2, 1fr);
 }
 
-.business{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    
+.add-cart > section > h2 {
+ font-size: 2rem;
+}
+.add-cart > section > button {
+  width: auto;
 }
 
-footer{
-    display: grid;
-    justify-content: center;
+.business {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.business > section:nth-child(4) {
+  font-size: 2rem;
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+}
+
+footer > h2 {
+  display: block;
+}
+
+footer > img {
+  width: 40%;
 }
